@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imgProduct"
+        ></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgProduct"
+        android:layout_marginTop="25dp"
+        android:id="@+id/lv1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Price:"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/lblPrice"
+            android:layout_weight="1"
+            ></TextView>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/pick"
+    android:layout_below="@id/lv1">
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Select Product"
+        android:layout_below="@+id/imgProduct"
+    ></TextView>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/imgProduct"
+        android:id="@+id/productSpinner"></Spinner>
+</LinearLayout>
+   <TextView
+       android:layout_width="150dp"
+       android:layout_height="50dp"
+       android:text="Quantity"
+       android:layout_below="@+id/pick"
+       ></TextView>
+    <NumberPicker
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:layout_below="@+id/pick"
+        android:id="@+id/pickerQuantity"
+        android:layout_marginLeft="200dp"
+        ></NumberPicker>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/pickerQuantity"
+    android:id="@+id/hy"
+ >
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbDelivery"
+        android:layout_weight="1"
+        android:text="Delivery">
+    </RadioButton>
+    <RadioButton
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbPickup"
+        android:text="Pickup"></RadioButton>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hy"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTotal"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>
